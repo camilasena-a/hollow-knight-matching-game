@@ -1,9 +1,9 @@
 import './style.css';
 
-function CardGame() { 
+function CardGame(icon = 'hkcapa.png',alt='capa do Holow Knight') { 
     return /*html*/`
     <article class = "card-game">
-        <img src="src/components/images/hollowKnight.png" alt="Logo do Hollow Knight">
+        <img src="src/components/images/${icon}" alt="${alt}">
     </article>
     `
  }
