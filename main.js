@@ -5,6 +5,6 @@ import CardGame from "./src/components/CardGame";
 import BoardGame from './src/objects/BoardGame';
 
 const $root = document.querySelector("#root") //boa prática: variavel referente a objeto da tela começa com $
-const $htmlBoardGame = BoardGame()
+const $htmlBoardGame = BoardGame(8)
 
 $root.insertAdjacentHTML('beforeend', $htmlBoardGame);
