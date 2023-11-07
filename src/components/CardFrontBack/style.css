@@ -1,0 +1,15 @@
+.card-front-back {
+    --width: 127px;
+    --height: 147px;
+    
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card-front-back > .front, 
+.card-front-back > .back {
+    position: absolute;
+    backface-visibility: hidden;    
+}
