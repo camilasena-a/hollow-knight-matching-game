@@ -16,7 +16,7 @@ function CardFrontBack() {
     ${CardGame()}
     </div>
     <div class = "card -back">
-    ${CardGame('radiancia','imagem da radiancia')}
+    ${CardGame('hollowKnight','imagem da radiancia')}
     </div>
     </article>
     `
