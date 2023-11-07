@@ -2,7 +2,7 @@ import "./style.css"
 import CardGame from "../CardGame"
 
 
-function CardFrontBack() {
+function CardFrontBack(icon,altIcon) {
     window.cardFrontBack = {}
     window.cardFrontBack.handleClick = (event) => {
         const $origin = event.target;
@@ -16,7 +16,7 @@ function CardFrontBack() {
     ${CardGame()}
     </div>
     <div class = "card -back">
-    ${CardGame('hollowKnight','imagem da radiancia')}
+    ${CardGame(icon,altIcon)}
     </div>
     </article>
     `
