@@ -3,12 +3,12 @@ import CardGame from "../CardGame"
 
 function CardFrontBack() {
     return /*html*/ `
-    <article class = "card-front-back">
-    <div class = "front">
+    <article class = "card-front-back -active">
+    <div class = "card -front">
     ${CardGame()}
     </div>
-    <div class = "back">
-    ${CardGame('Javascript')}
+    <div class = "card -back">
+    ${CardGame('radiancia','imagem da radiancia')}
     </div>
     </article>
     `
