@@ -1,37 +1,25 @@
 import "./style.css"
 import CardFrontBack from "../../components/CardFrontBack";
+import cards from "./data";
 
 function BoardGame(amountCards) {
-    const cards = [{
-        icon: "hollowKnight",
-        altIcon: "imagem da Hornert"
-    },
-    {
-        icon: "hollowKnight",
-        altIcon: "imagem da Hornert"
-    },
-    {
-        icon: "radiancia",
-        altIcon: "imagem da radiancia"
-    },
-    {
-        icon: "radiancia",
-        altIcon: "imagem da radiancia"
-    },
-    {
-        icon: "reiPalido",
-        altIcon: "imagem da radiancia"
-    },    
-    {
-        icon: "reiPalido",
-        altIcon: "imagem da radiancia"
-    }];
-    
+    window.boardGame = {};
+    window.boardGame.handleClick = () => {
+        const $boardGame = document.querySelector('.board-game');
+        const $cardsActive = $boardGame.querySelectorAll('.card-front-back.-active');
+
+        if($cardsActive.length == 2) {
+            setTimeout(() => {     
+                $cardsActive.forEach((card) => card.classList.remove('-active'))
+            }, 870);
+        }
+
+    }
     const htmlCardsList = cards.map((card) => CardFrontBack(card.icon,card.altIcon));
     const $htmlCards = htmlCardsList.join('');
 
     return /*html*/`
-    <section class="board-game">
+    <section class="board-game" onClick="boardGame.handleClick()">
     ${$htmlCards}
     </section>
     `
