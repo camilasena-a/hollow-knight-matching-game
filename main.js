@@ -1,6 +1,7 @@
 import './src/styles/settings/colors.css';
 import './src/styles/generic/reset.css';
 import './src/styles/elements/base.css';
+import './src/styles/containers/game-container.css';
 import BoardGame from './src/objects/BoardGame';
 import ScoreBoard from './src/objects/ScoreBoard';
 
@@ -10,8 +11,10 @@ const $root = document.querySelector("#root"); //boa prática: variavel referent
 $root.insertAdjacentHTML(
     'beforeend', 
     `
-    ${ScoreBoard()}
-    ${BoardGame()}
+    <div class="game-container">
+        ${ScoreBoard()}
+        ${BoardGame()}
+    </div>
     `
     );
 

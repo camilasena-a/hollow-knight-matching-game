@@ -1,0 +1,20 @@
+.game-container {
+    max-width: 980px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid rgba(86, 90, 117, 0.9);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 3px #565a75, inset 0 0 10px 1px #565a75;
+    position: relative;
+    animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        box-shadow: 0 0 20px 3px #565a75, inset 0 0 20px 1px #565a75;
+    }
+    to {
+        box-shadow: 0 0 52px 5px #565a75, inset 0 0 32px 2px #565a75;
+    }
+} 
