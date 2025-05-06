@@ -1,11 +1,11 @@
-import './style.css';
+import "./style.css"
 
-function CardGame(icon = 'hkcapa',alt='capa do Holow Knight') { 
+function CardGame(icon = "", altIcon = "") {
     return /*html*/`
-    <article class = "card-game">
-        <img src="src/components/images/${icon}.png" alt="${alt}">
+    <article class="card-game">
+        ${icon ? `<img src="./src/components/images/${icon}.png" alt="${altIcon}">` : ""}
     </article>
     `
- }
+}
 
- export default CardGame;
+export default CardGame;
