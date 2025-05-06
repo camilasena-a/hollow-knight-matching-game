@@ -19,7 +19,7 @@
     visibility: visible;
 }
 
-.start-modal {
+.start-modal, .end-modal {
     background-color: #111216;
     border: 1px solid rgba(86, 90, 117, 0.9);
     border-radius: 10px;
@@ -47,7 +47,7 @@
     line-height: 1.6;
 }
 
-.start-button {
+.start-button, .restart-button {
     background-color: #3c3e52;
     border: none;
     border-radius: 5px;
@@ -60,10 +60,14 @@
     box-shadow: 0 0 10px #565a75;
 }
 
-.start-button:hover {
+.start-button:hover, .restart-button:hover {
     background-color: #565a75;
     transform: scale(1.05);
     box-shadow: 0 0 15px #565a75;
+}
+
+.restart-button {
+    background-color: #4a4e6a;
 }
 
 .hidden {

@@ -9,6 +9,7 @@ function BoardGame(amountCards) {
     window.boardGame.currentPlayer = 1;
     window.boardGame.scores = { 1: 0, 2: 0 };
     window.boardGame.matchedPairs = 0;
+    window.boardGame.totalPairs = cards.length / 2;
     
     // Função para posicionar a seta sobre o player correto
     window.boardGame.positionArrow = (player) => {
@@ -24,6 +25,33 @@ function BoardGame(amountCards) {
         } else {
             // Posicionar sobre o Player 2
             $arrowDown.style.left = 'calc(100% - 9rem)';
+        }
+    };
+    
+    // Função para verificar fim de jogo
+    window.boardGame.checkEndGame = () => {
+        if (window.boardGame.matchedPairs >= window.boardGame.totalPairs) {
+            // Determina o vencedor
+            const player1Score = window.boardGame.scores[1];
+            const player2Score = window.boardGame.scores[2];
+            
+            let winner;
+            if (player1Score > player2Score) {
+                winner = 1;
+            } else if (player2Score > player1Score) {
+                winner = 2;
+            } else {
+                winner = "Empate";
+            }
+            
+            // Mostra o modal de fim de jogo após um pequeno delay
+            setTimeout(() => {
+                if (winner === "Empate") {
+                    window.showEndGameModal("Empate! Ambos jogadores");
+                } else {
+                    window.showEndGameModal(winner);
+                }
+            }, 500);
         }
     };
     
@@ -80,6 +108,9 @@ function BoardGame(amountCards) {
                 
                 // Adiciona ponto ao jogador atual
                 window.boardGame.addPoint();
+                
+                // Verifica se o jogo acabou
+                window.boardGame.checkEndGame();
                 
                 // Permite clicar em outras cartas
                 $boardGame.classList.remove('-checking');
