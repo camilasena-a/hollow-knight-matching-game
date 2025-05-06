@@ -1,0 +1,49 @@
+.card-front-back {
+    --width: 127px;
+    --height: 147px;
+    
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.card-front-back.-active {
+    transform: rotateY(180deg);
+
+}
+
+/* Estilo para cartas combinadas */
+.card-front-back.-matched {
+    transform: rotateY(180deg);
+    cursor: default;
+    box-shadow: 0 0 9px rgb(86, 90, 117), 0 0 20px rgb(86, 90, 117), 0 0 30px rgb(86, 90, 117);
+    animation: matched-neon 2s infinite;
+}
+
+@keyframes matched-neon {
+    0% { 
+        box-shadow: 0 0 7px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117); 
+    }
+    50% { 
+        box-shadow: 0 0 10px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117), 0 0 20px rgb(86, 90, 117); 
+    }
+    100% { 
+        box-shadow: 0 0 7px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117); 
+    }
+}
+
+.card-front-back > .card {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front-back > .card.-back {
+    transform: rotateY(180deg);
+}
+
+.card-front-back >card.-back > .card-game {
+    background-color: red;
+}

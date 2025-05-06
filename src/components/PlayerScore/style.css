@@ -1,0 +1,14 @@
+.player-score {
+    box-sizing: border-box;
+    min-width: 50px;
+    height: 30px;
+    background-color: var(--color-floral-white);
+    border: 2px solid var(--color-fiery-rose);
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: var(--color-fiery-rose);
+}
