@@ -19,14 +19,20 @@
 .card-front-back.-matched {
     transform: rotateY(180deg);
     cursor: default;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-    animation: matched-pulse 2s infinite;
+    box-shadow: 0 0 9px rgb(86, 90, 117), 0 0 20px rgb(86, 90, 117), 0 0 30px rgb(86, 90, 117);
+    animation: matched-neon 2s infinite;
 }
 
-@keyframes matched-pulse {
-    0% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); }
-    50% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); }
-    100% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); }
+@keyframes matched-neon {
+    0% { 
+        box-shadow: 0 0 7px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117); 
+    }
+    50% { 
+        box-shadow: 0 0 10px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117), 0 0 20px rgb(86, 90, 117); 
+    }
+    100% { 
+        box-shadow: 0 0 7px rgb(86, 90, 117), 0 0 10px rgb(86, 90, 117); 
+    }
 }
 
 .card-front-back > .card {
