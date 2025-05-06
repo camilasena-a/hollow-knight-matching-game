@@ -2,7 +2,7 @@
 
 Um jogo da memória temático baseado no universo de Hollow Knight - um dos jogos indie mais aclamados de todos os tempos.
 
-![Hollow Knight Matching Game](src/components/images/knight.png)
+![Hollow Knight Matching Game](src/components/images/preview.png)
 
 ## 📖 Sobre o Projeto
 
