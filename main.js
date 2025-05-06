@@ -3,6 +3,7 @@ import './src/styles/generic/reset.css';
 import './src/styles/elements/base.css';
 import './src/styles/containers/game-container.css';
 import './src/styles/containers/modal.css';
+import './src/styles/components/footer.css';
 import BoardGame from './src/objects/BoardGame';
 import ScoreBoard from './src/objects/ScoreBoard';
 
@@ -45,6 +46,10 @@ $root.insertAdjacentHTML(
         ${ScoreBoard()}
         ${BoardGame()}
     </div>
+    
+    <footer class="footer">
+        <p>Desenvolvido por<br>Camila Sena</p>
+    </footer>
     `
 );
 
@@ -73,7 +78,10 @@ function resetGame() {
     gameContainer.innerHTML = '';
     
     // Recria o conteúdo do jogo
-    gameContainer.innerHTML = `${ScoreBoard()}${BoardGame()}`;
+    gameContainer.innerHTML = `
+        ${ScoreBoard()}
+        ${BoardGame()}
+    `;
     
     // Mostra o jogo novamente
     setTimeout(() => {

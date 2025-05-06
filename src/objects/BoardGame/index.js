@@ -16,15 +16,26 @@ function BoardGame(amountCards) {
         const $arrowDown = document.querySelector('.arrow-down');
         if (!$arrowDown) return;
         
+        // Obtém as referências aos contêineres dos jogadores
+        const $player1Container = document.querySelector('.player-container:first-child');
+        const $player2Container = document.querySelector('.player-container:last-of-type');
+        
         console.log(`Posicionando seta para o player ${player}`);
         
-        // Abordagem simplificada para posicionar a seta
-        if (player === 1) {
-            // Posicionar sobre o Player 1
-            $arrowDown.style.left = '6rem';
-        } else {
-            // Posicionar sobre o Player 2
-            $arrowDown.style.left = 'calc(100% - 9rem)';
+        if (player === 1 && $player1Container) {
+            // Centraliza a seta sobre o Player 1
+            const containerRect = $player1Container.getBoundingClientRect();
+            const containerCenter = containerRect.left + containerRect.width / 2;
+            const scoreboardRect = document.querySelector('.score-board').getBoundingClientRect();
+            const arrowLeftPosition = containerCenter - scoreboardRect.left - ($arrowDown.offsetWidth / 2);
+            $arrowDown.style.left = `${arrowLeftPosition}px`;
+        } else if ($player2Container) {
+            // Centraliza a seta sobre o Player 2
+            const containerRect = $player2Container.getBoundingClientRect();
+            const containerCenter = containerRect.left + containerRect.width / 2;
+            const scoreboardRect = document.querySelector('.score-board').getBoundingClientRect();
+            const arrowLeftPosition = containerCenter - scoreboardRect.left - ($arrowDown.offsetWidth / 2);
+            $arrowDown.style.left = `${arrowLeftPosition}px`;
         }
     };
     
@@ -71,6 +82,11 @@ function BoardGame(amountCards) {
     setTimeout(() => {
         console.log("Inicializando posição da seta");
         window.boardGame.positionArrow(1);
+        
+        // Recalcula posição da seta quando a janela for redimensionada
+        window.addEventListener('resize', () => {
+            window.boardGame.positionArrow(window.boardGame.currentPlayer);
+        });
     }, 300);
     
     // Função para incrementar a pontuação do jogador atual

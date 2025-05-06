@@ -1,0 +1,23 @@
+.footer {
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 5;
+    line-height: 1.5;
+}
+
+.footer p {
+    text-shadow: 0 0 5px rgba(86, 90, 117, 0.7);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer p:hover {
+    color: #e7e7e7;
+    text-shadow: 0 0 8px rgba(86, 90, 117, 1);
+    cursor: default;
+} 
