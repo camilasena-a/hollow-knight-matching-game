@@ -1,10 +1,11 @@
 .board-game {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
     perspective: 400px;
-    max-width: 425px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
