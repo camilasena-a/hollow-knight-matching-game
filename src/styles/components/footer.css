@@ -11,13 +11,19 @@
     line-height: 1.5;
 }
 
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
 .footer p {
     text-shadow: 0 0 5px rgba(86, 90, 117, 0.7);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.footer p:hover {
+.footer a:hover p {
     color: #e7e7e7;
     text-shadow: 0 0 8px rgba(86, 90, 117, 1);
-    cursor: default;
 } 

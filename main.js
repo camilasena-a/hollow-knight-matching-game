@@ -48,7 +48,9 @@ $root.insertAdjacentHTML(
     </div>
     
     <footer class="footer">
-        <p>Desenvolvido por<br>Camila Sena</p>
+        <a href="https://github.com/camilasena-a" target="_blank">
+            <p>Desenvolvido por<br>Camila Sena</p>
+        </a>
     </footer>
     `
 );
