@@ -14,3 +14,15 @@ $root.insertAdjacentHTML(
     ${BoardGame()}
     `
     );
+
+// Função de teste para alternar jogador via console
+window.testTogglePlayer = () => {
+    if (window.boardGame && typeof window.boardGame.togglePlayer === 'function') {
+        window.boardGame.togglePlayer();
+        console.log(`Jogador atual: ${window.boardGame.currentPlayer}`);
+        return `Alternado para o jogador ${window.boardGame.currentPlayer}`;
+    } else {
+        console.error('Função togglePlayer não disponível');
+        return 'Erro: Função togglePlayer não disponível';
+    }
+};

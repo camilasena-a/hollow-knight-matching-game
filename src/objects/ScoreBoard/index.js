@@ -6,13 +6,20 @@ import ArrowDown from "../../components/ArrowDown";
 
 function ScoreBoard() {
     return /*html*/ `
-    <header class="score-board"> 
-    ${ArrowDown(1)}
-    ${PlayerName("Player 1")}
-    ${PlayerScore(1)}
-    ${VsPlayer()}
-    ${PlayerScore(2)}
-    ${PlayerName("Player 2")}
+    <header class="score-board">
+        <div class="player-container">
+            ${PlayerName("Player 1")}
+            ${PlayerScore(1)}
+        </div>
+        
+        ${VsPlayer()}
+        
+        <div class="player-container">
+            ${PlayerName("Player 2")}
+            ${PlayerScore(2)}
+        </div>
+        
+        ${ArrowDown(1)}
     </header>
     `
 }

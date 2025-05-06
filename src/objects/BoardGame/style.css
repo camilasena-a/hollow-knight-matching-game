@@ -1,7 +1,14 @@
 .board-game {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: center;
     perspective: 400px;
+    max-width: 425px;
+    margin: 0 auto;
+}
+
+/* Quando estiver verificando cartas, desabilita eventos nos cards não ativos */
+.board-game.-checking .card-front-back:not(.-active):not(.-matched) {
+    pointer-events: none;
 }

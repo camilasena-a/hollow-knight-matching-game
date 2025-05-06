@@ -1,10 +1,15 @@
 .arrow-down {
     position: absolute;
-    top: 4px;
-    transform: translateX(-40px);
-    transition: transform 700ms ease-in-out;
+    top: -5px;
+    left: 60px;
+    width: 25px;
+    height: auto;
+    transition: left 0.5s ease-in-out;
+    z-index: 10;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
-.arrow-down[data-currentPlayer="2"] {
+/* Remover esta regra que está conflitando com o posicionamento via JavaScript */
+/* .arrow-down[data-currentPlayer="2"] {
     transform: translateX(40px);
-}
+} */
