@@ -129,6 +129,47 @@ const cards = [
 ];
 ```
 
+## 🚀 Como Executar o Projeto
+
+### Localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/camilasena-a/hollow-knight-matching-game.git
+cd hollow-knight-matching-game
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Execute o projeto em modo de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+4. Abra o navegador em `http://localhost:5173`
+
+### Deploy no GitHub Pages
+
+1. Faça o build do projeto:
+
+```bash
+npm run build
+```
+
+2. Execute o deploy:
+
+```bash
+npm run deploy
+```
+
+O projeto será automaticamente publicado em: `https://camilasena-a.github.io/hollow-knight-matching-game/`
+
 ## 🔍 Próximos Passos
 
 Algumas melhorias que podem ser implementadas no futuro:
@@ -137,6 +178,8 @@ Algumas melhorias que podem ser implementadas no futuro:
 - Implementar diferentes níveis de dificuldade
 - Adicionar um modo de um jogador contra o computador
 - Salvar histórico de pontuações
+- Adicionar animações mais elaboradas
+- Implementar sistema de ranking
 
 ## 📄 Licença
 

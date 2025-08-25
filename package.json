@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://camilasena-a.github.io/hollow-knight-matching-game/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
